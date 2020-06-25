@@ -1,0 +1,9 @@
+// === Main content ===
+.main__content{
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @include sm(margin-bottom, 0);
+}
+// === / Main content ===

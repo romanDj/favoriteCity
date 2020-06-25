@@ -1,0 +1,17 @@
+// === Discount ===
+.discount {
+  @include font-roboto(700);
+  position: relative;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 7px;
+  padding-left: 7px;
+  color: #FDFDFD;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background: #F89C1C;
+  border-radius: 5px 0 0 5px;
+}
+
+// === / Discount ===

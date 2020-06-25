@@ -1,0 +1,14 @@
+// === Horizontal banner ===
+.banner-hor {
+  order: 3;
+
+  @include from-to(768px, 960px) {
+    order: 6;
+  }
+
+  .banner__outer {
+    width: 100%;
+    padding-top: 19.9%;
+  }
+}
+// === / Horizontal banner ===

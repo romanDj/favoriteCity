@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Любимый город</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/css/jquery.modal.min.css"/>
+    <link rel="stylesheet" href="lib/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="lib/css/slick-theme.css"/>
+    <link rel="stylesheet" href="dist/index.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+    <div class="header__upper">
+        <div class="header__link">
+            <a href="#">Главная</a>
+        </div>
+        <div class="header__link">
+            <a href="#">Франшиза</a>
+        </div>
+        <div class="header__link">
+            <a href="#">О нас</a>
+        </div>
+
+        <div class="header__location">
+            <span class="header__location-label">Ваш город:</span>
+            <a href="#" class="header__location-city">Альметьевск</a>
+        </div>
+
+        <div class="header__link">
+            <a href="#mobRedirect" rel="modal:open">Личный кабинет</a>
+        </div>
+        <div class="header__lang">
+            <a href="javascript:void(0);">RU</a>
+            <div class="header__dropdown">
+                <div class="header__dropdown-item">
+                    <a href="#">English</a>
+                </div>
+                <div class="header__dropdown-item header__dropdown-item-selected">
+                    <a href="#">Русский</a>
+                </div>
+                <div class="header__dropdown-item">
+                    <a href="#">English</a>
+                </div>
+                <div class="header__dropdown-item">
+                    <a href="#">English</a>
+                </div>
+            </div>
+        </div>
+        <div class="header__add">
+            <button type="button" class="btn">Добавить...</button>
+            <div class="header__dropdown">
+                <div class="header__dropdown-item">
+                    <a href="#">Объявление</a>
+                </div>
+                <div class="header__dropdown-item">
+                    <a href="#">Новость</a>
+                </div>
+                <div class="header__dropdown-item">
+                    <a href="#">Мероприятие</a>
+                </div>
+                <div class="header__dropdown-item">
+                    <a href="#">Что-то ещё</a>
+                </div>
+            </div>
+        </div>
+
+        <!--<div>
+            <img src="img/burger.png" alt="side">
+        </div>-->
+    </div>
+
+    <div class="header__lower">
+        <div class="header__logo">
+            <img src="img/logo_36.png" alt="logo" class="header__logo-img">
+            <a href="#" class="header__logo-text">Любимый город</a>
+        </div>
+        <div class="header__menu">
+            <div class="header__menu-item">
+                <a href="javascript:void(0);">
+                    <img src="img/dropdown.png" class="header__menu-dropdown" alt="dropdown">
+                    <span>Справочник</span>
+                </a>
+                <div class="catalog">
+                    <div class="catalog__category catalog__category-rtl">
+                        <ul class="catalog__category-items  catalog__category-items-hover-shadow">
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                                <div class="catalog__category catalog__category-secondary">
+                                    <ul class="catalog__category-items">
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                        <li class="catalog__category-item">
+                                            <a href="#">Страховые компании (1234)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                            <li class="catalog__category-item">
+                                <a href="#">Банки, финансы, страхование (1234)</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="header__menu-item header__menu-item-curr">
+                <a href="#"><span>Кино</span></a>
+            </div>
+            <div class="header__menu-item">
+                <a href="#"><span>Афиша</span></a>
+            </div>
+            <div class="header__menu-item">
+                <a href="#"><span>Акции и скидки</span></a>
+            </div>
+        </div>
+        <form class="header__search">
+            <input type="text" name="search" class="header__search-input" placeholder="Поиск по сайту...">
+            <button type="submit" class="header__search-img">
+                <img src="img/search.png" loading="lazy" alt="search">
+            </button>
+        </form>
+        <div class="header__menu-hover"></div>
+    </div>
+</header>
+<!-- / Header -->
+
+<main class="main__content">
+    <!-- Advertising slider -->
+    <section class="section">
+        <div class="container">
+            <div class="advert__outer">
+                <div class="advert__slider">
+                    <div>
+                        <a href="#1" class="advert__item">
+                            <img src="img/cards/advertising.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#2" class="advert__item">
+                            <img src="img/cards/advertising.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#3" class="advert__item">
+                            <img src="img/cards/advertising.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <span class="advertising-tag">реклама</span>
+            </div>
+        </div>
+    </section>
+    <!-- / Advertising slider -->
+
+    <!-- Business tape -->
+    <section class="section business">
+        <div class="section__inner">
+            <div class="slider">
+                <div class="slider__header">
+                    <a href="#" class="slider__title">БИЗНЕС-ЛЕНТА</a>
+                    <a class="slider__link" href="#">Показать ещё</a>
+                    <div class="slider__control">
+                        <button type="button" data-type="slider-btn-prev" class="slider__control-prev"></button>
+                        <button type="button" data-type="slider-btn-next" class="slider__control-next"></button>
+                    </div>
+                </div>
+                <div class="slider__substrate">
+                    <div class="slider__content" data-type="slider-content">
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/business.png" alt="preview_img">
+                                </div>
+                                <div class="card__content">
+                                    <span class="card__title">Мосгорсуд заблокировал трансляции Английской премьер-лиги на Twitch</span>
+                                    <div class="card__info card__info-secondary">
+                                        <span class="card__source">Источник (Наименование компании) Источник (Наименование компании)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/business.png" alt="preview_img">
+                                </div>
+                                <div class="card__content">
+                                    <span class="card__title">Мосгорсуд заблокировал трансляции Английской премьер-лиги на Twitch</span>
+                                    <div class="card__info card__info-secondary">
+                                        <span class="card__source">Источник (Наименование компании) Источник (Наименование компании)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/business.png" alt="preview_img">
+                                </div>
+                                <div class="card__content">
+                                    <span class="card__title">Мосгорсуд заблокировал трансляции Английской премьер-лиги на Twitch</span>
+                                    <div class="card__info card__info-secondary">
+                                        <span class="card__source">Источник (Наименование компании) Источник (Наименование компании)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/business.png" alt="preview_img">
+                                </div>
+                                <div class="card__content">
+                                    <span class="card__title">Мосгорсуд заблокировал трансляции Английской премьер-лиги на Twitch</span>
+                                    <div class="card__info card__info-secondary">
+                                        <span class="card__source">Источник (Наименование компании) Источник (Наименование компании)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/business.png" alt="preview_img">
+                                </div>
+                                <div class="card__content">
+                                    <span class="card__title">Мосгорсуд заблокировал трансляции Английской премьер-лиги на Twitch</span>
+                                    <div class="card__info card__info-secondary">
+                                        <span class="card__source">Источник (Наименование компании) Источник (Наименование компании)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/business.png" alt="preview_img">
+                                </div>
+                                <div class="card__content">
+                                    <span class="card__title">Мосгорсуд заблокировал трансляции Английской премьер-лиги на Twitch</span>
+                                    <div class="card__info card__info-secondary">
+                                        <span class="card__source">Источник (Наименование компании) Источник (Наименование компании)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- / Business tape -->
+
+    <!-- Movie -->
+    <section class="section movie">
+        <div class="section__inner">
+            <div class="slider">
+                <div class="slider__header">
+                    <a href="#" class="slider__title">КИНО</a>
+                    <a class="slider__link" href="#">Показать ещё</a>
+                    <div class="slider__control">
+                        <button type="button" data-type="slider-btn-prev" class="slider__control-prev"></button>
+                        <button type="button" data-type="slider-btn-next" class="slider__control-next"></button>
+                    </div>
+                </div>
+                <div class="slider__substrate slider__substrate-light slider__substrate-light-purple">
+                    <div class="slider__content" data-type="slider-content">
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/ad-image.png" alt="preview_img">
+                                </div>
+                                <span class="rating rating-purple">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Драмма</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">1Зеленая книга Зеленая книга Зеленая книга Зеленая книга</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/movie_2.png" alt="preview_img">
+                                </div>
+                                <span class="rating rating-purple">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Драмма, исторический, биография</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">2Зеленая книга Зеленая книга Зеленая книга Зеленая книга</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/movie_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating rating-purple">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Драмма, исторический, биография</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">3Зеленая книга Зеленая книга Зеленая книга Зеленая книга</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/movie_2.png" alt="preview_img">
+                                </div>
+                                <span class="rating rating-purple">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Драмма, исторический, биография</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">4Зеленая книга Зеленая книга Зеленая книга Зеленая книга</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/movie_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating rating-purple">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Драмма, исторический, биография</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">5Зеленая книга Зеленая книга Зеленая книга Зеленая книга</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/movie_2.png" alt="preview_img">
+                                </div>
+                                <span class="rating rating-purple">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Драмма, исторический, биография</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">6Зеленая книга Зеленая книга Зеленая книга Зеленая книга</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/movie_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating rating-purple">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Драмма, исторический, биография</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">7Зеленая книга Зеленая книга Зеленая книга Зеленая книга</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/movie_2.png" alt="preview_img">
+                                </div>
+                                <span class="rating rating-purple">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Драмма, исторический, биография</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">8Зеленая книга Зеленая книга Зеленая книга Зеленая книга</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/movie_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating rating-purple">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Драмма, исторический, биография</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">9Зеленая книга Зеленая книга Зеленая книга Зеленая книга</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/movie_2.png" alt="preview_img">
+                                </div>
+                                <span class="rating rating-purple">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Драмма, исторический, биография</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">10Зеленая книга Зеленая книга Зеленая книга Зеленая книга</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/movie_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating rating-purple">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Драмма, исторический, биография</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">11Зеленая книга Зеленая книга Зеленая книга Зеленая книга</span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/movie_2.png" alt="preview_img">
+                                </div>
+                                <span class="rating rating-purple">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Драмма, исторический, биография</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">12Зеленая книга Зеленая книга Зеленая книга Зеленая книга</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / Movie -->
+
+    <!-- Horizontal banner -->
+    <section class="section banner-hor">
+        <div class="container">
+            <div class="banner__outer">
+                <div class="banner">
+                    <div class="banner__content">
+                        <a href="#3" class="link-wrapper">
+                            <img class="banner__img" src="img/cards/advertising_banner3.png" alt="banner">
+                        </a>
+                        <a href="#2" class="link-wrapper">
+                            <img class="banner__img" src="img/cards/advertising_banner2.png" alt="banner">
+                        </a>
+                        <a href="#1" class="link-wrapper">
+                            <img class="banner__img" src="img/cards/advertising_banner1.png" alt="banner">
+                        </a>
+                        <a href="#0" class="link-wrapper">
+                            <img class="banner__img" src="img/cards/advertising_banner.png" alt="banner">
+                        </a>
+                    </div>
+                    <span class="advertising-tag">реклама</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / Horizontal banner -->
+
+    <!-- Ads -->
+    <section class="section ads">
+        <div class="section__inner">
+            <div class="ads__inner">
+                <!-- Vertical banner -->
+                <div class="banner-vert">
+                    <div class="banner__outer">
+                        <div class="banner">
+                            <div class="banner__content">
+                                <a href="#3" class="link-wrapper">
+                                    <img class="banner__img" src="img/cards/banner_vert.png" alt="banner">
+                                </a>
+                                <a href="#2" class="link-wrapper">
+                                    <img class="banner__img" src="img/cards/banner_vert.png" alt="banner">
+                                </a>
+                                <a href="#1" class="link-wrapper">
+                                    <img class="banner__img" src="img/cards/banner_vert.png" alt="banner">
+                                </a>
+                                <a href="#0" class="link-wrapper">
+                                    <img class="banner__img" src="img/cards/banner_vert.png" alt="banner">
+                                </a>
+                            </div>
+                            <span class="advertising-tag">реклама</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Vertical banner -->
+
+                <div class="slider">
+                    <div class="slider__header">
+                        <a href="#" class="slider__title">ОБЪЯВЛЕНИЯ</a>
+                        <a class="slider__link" href="#">Показать ещё</a>
+                        <div class="slider__control">
+                            <button type="button" data-type="slider-btn-prev" class="slider__control-prev"></button>
+                            <button type="button" data-type="slider-btn-next" class="slider__control-next"></button>
+                        </div>
+                    </div>
+                    <div class="slider__substrate">
+                        <div class="slider__content" data-type="slider-content">
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__content">
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__category">
+                                                <span>Вакансии</span>
+                                            </div>
+                                        </div>
+                                        <span class="card__company">ООО Кафе ПанКот</span>
+                                        <span class="card__title">Требуется повар, зарплата от 30 000 руб. на руки Требуется повар, зарплата от 30 000 руб. на руки</span>
+                                        <span class="card__address">пр. Сююмбике, 40, Нижнийпр. Сююмбике, 40, Нижнийпр. Сююмбике, 40, Нижний</span>
+                                    </div>
+                                    <div class="card__column">
+                                        <div class="card__img">
+                                            <img src="img/cards/ad-image.png" alt="preview_img">
+                                        </div>
+                                        <div class="card__price-ad">
+                                            <span>10 000 000 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__content">
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__category">
+                                                <span>Вакансии</span>
+                                            </div>
+                                        </div>
+                                        <span class="card__company">ООО Кафе ПанКот</span>
+                                        <span class="card__title">Требуется повар, зарплата от 30 000 руб. на руки Требуется повар, зарплата от 30 000 руб. на руки</span>
+                                        <span class="card__address">пр. Сююмбике, 40, Нижнийпр. Сююмбике, 40, Нижнийпр. Сююмбике, 40, Нижний</span>
+                                    </div>
+                                    <div class="card__column">
+                                        <div class="card__img">
+                                            <img src="img/cards/card_1.png" alt="preview_img">
+                                        </div>
+                                        <div class="card__price-ad">
+                                            <span>10 000 000 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__content">
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__category">
+                                                <span>Вакансии</span>
+                                            </div>
+                                        </div>
+                                        <span class="card__company">ООО Кафе ПанКот</span>
+                                        <span class="card__title">Требуется повар, зарплата от 30 000 руб. на руки Требуется повар, зарплата от 30 000 руб. на руки</span>
+                                        <span class="card__address">пр. Сююмбике, 40, Нижнийпр. Сююмбике, 40, Нижнийпр. Сююмбике, 40, Нижний</span>
+                                    </div>
+                                    <div class="card__column">
+                                        <div class="card__img">
+                                            <img src="img/cards/card_1.png" alt="preview_img">
+                                        </div>
+                                        <div class="card__price-ad">
+                                            <span>10 000 000 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__content">
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__category">
+                                                <span>Вакансии</span>
+                                            </div>
+                                        </div>
+                                        <span class="card__company">ООО Кафе ПанКот</span>
+                                        <span class="card__title">Требуется повар, зарплата от 30 000 руб. на руки Требуется повар, зарплата от 30 000 руб. на руки</span>
+                                        <span class="card__address">пр. Сююмбике, 40, Нижнийпр. Сююмбике, 40, Нижнийпр. Сююмбике, 40, Нижний</span>
+                                    </div>
+                                    <div class="card__column">
+                                        <div class="card__img">
+                                            <img src="img/cards/card_1.png" alt="preview_img">
+                                        </div>
+                                        <div class="card__price-ad">
+                                            <span>10 000 000 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__content">
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__category">
+                                                <span>Вакансии</span>
+                                            </div>
+                                        </div>
+                                        <span class="card__company">ООО Кафе ПанКот</span>
+                                        <span class="card__title">Требуется повар, зарплата от 30 000 руб. на руки Требуется повар, зарплата от 30 000 руб. на руки</span>
+                                        <span class="card__address">пр. Сююмбике, 40, Нижнийпр. Сююмбике, 40, Нижнийпр. Сююмбике, 40, Нижний</span>
+                                    </div>
+                                    <div class="card__column">
+                                        <div class="card__img">
+                                            <img src="img/cards/card_1.png" alt="preview_img">
+                                        </div>
+                                        <div class="card__price-ad">
+                                            <span>10 000 000 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__content">
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__category">
+                                                <span>Вакансии</span>
+                                            </div>
+                                        </div>
+                                        <span class="card__company">ООО Кафе ПанКот</span>
+                                        <span class="card__title">Требуется повар, зарплата от 30 000 руб. на руки Требуется повар, зарплата от 30 000 руб. на руки</span>
+                                        <span class="card__address">пр. Сююмбике, 40, Нижнийпр. Сююмбике, 40, Нижнийпр. Сююмбике, 40, Нижний</span>
+                                    </div>
+                                    <div class="card__column">
+                                        <div class="card__img">
+                                            <img src="img/cards/card_1.png" alt="preview_img">
+                                        </div>
+                                        <div class="card__price-ad">
+                                            <span>10 000 000 ₽</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / Ads -->
+
+    <!-- Poster -->
+    <section class="section poster">
+        <div class="section__inner">
+            <div class="slider">
+                <div class="slider__header">
+                    <a href="#" class="slider__title">АФИША</a>
+                    <a class="slider__link" href="#">Показать ещё</a>
+                    <div class="slider__control">
+                        <button type="button" data-type="slider-btn-prev" class="slider__control-prev"></button>
+                        <button type="button" data-type="slider-btn-next" class="slider__control-next"></button>
+                    </div>
+                </div>
+                <div class="slider__substrate slider__substrate-light slider__substrate-light-red">
+                    <div class="slider__content" data-type="slider-content">
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/poster_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Концерт</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>7 декабря</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">Алла Пугачева Тот самый концерт</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/poster_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Концерт</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>7 декабря</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">Алла Пугачева Тот самый концерт</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/poster_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Концерт</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>7 декабря</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">Алла Пугачева Тот самый концерт</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/poster_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Концерт</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>7 декабря</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">Алла Пугачева Тот самый концерт</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/poster_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Концерт</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>7 декабря</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">Алла Пугачева Тот самый концерт</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/poster_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Концерт</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>7 декабря</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">Алла Пугачева Тот самый концерт</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/poster_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__category">
+                                            <span>Концерт</span>
+                                        </div>
+                                        <div class="card__restriction">
+                                            <span>12+</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>7 декабря</span>
+                                        </div>
+                                    </div>
+                                    <span class="card__title">Алла Пугачева Тот самый концерт</span>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / Poster -->
+
+    <!-- Promotions -->
+    <section class="section promotions">
+        <div class="section__inner">
+            <div class="slider">
+                <div class="slider__header">
+                    <a href="#" class="slider__title">Акции и скидки</a>
+                    <a class="slider__link" href="#">Показать ещё</a>
+                    <div class="slider__control">
+                        <button type="button" data-type="slider-btn-prev" class="slider__control-prev"></button>
+                        <button type="button" data-type="slider-btn-next" class="slider__control-next"></button>
+                    </div>
+                </div>
+                <div class="slider__substrate">
+                    <div class="slider__content" data-type="slider-content">
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/ad-image.png" alt="preview_img">
+                                </div>
+                                <span class="discount">38%</span>
+                                <div class="card__content">
+                                    <div class="card__price">
+                                        <span class="card__price-now">77.69₽</span>
+                                        <span class="card__price-old">121.69₽</span>
+                                    </div>
+                                    <span class="card__title">Вафли ЭССЕН Вертушки веснушки со вкусом вареной сгущенки (Россия)</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/promotion_1.png" alt="preview_img">
+                                </div>
+                                <span class="discount">38%</span>
+                                <div class="card__content">
+                                    <div class="card__price">
+                                        <span class="card__price-now">77.69₽</span>
+                                        <span class="card__price-old">121.69₽</span>
+                                    </div>
+                                    <span class="card__title">Вафли ЭССЕН Вертушки веснушки со вкусом вареной сгущенки (Россия)</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/promotion_1.png" alt="preview_img">
+                                </div>
+                                <span class="discount">38%</span>
+                                <div class="card__content">
+                                    <div class="card__price">
+                                        <span class="card__price-now">77.69₽</span>
+                                        <span class="card__price-old">121.69₽</span>
+                                    </div>
+                                    <span class="card__title">Вафли ЭССЕН Вертушки веснушки со вкусом вареной сгущенки (Россия)</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/promotion_1.png" alt="preview_img">
+                                </div>
+                                <span class="discount">38%</span>
+                                <div class="card__content">
+                                    <div class="card__price">
+                                        <span class="card__price-now">77.69₽</span>
+                                        <span class="card__price-old">121.69₽</span>
+                                    </div>
+                                    <span class="card__title">Вафли ЭССЕН Вертушки веснушки со вкусом вареной сгущенки (Россия)</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/promotion_1.png" alt="preview_img">
+                                </div>
+                                <span class="discount">38%</span>
+                                <div class="card__content">
+                                    <div class="card__price">
+                                        <span class="card__price-now">77.69₽</span>
+                                        <span class="card__price-old">121.69₽</span>
+                                    </div>
+                                    <span class="card__title">Вафли ЭССЕН Вертушки веснушки со вкусом вареной сгущенки (Россия)</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/promotion_1.png" alt="preview_img">
+                                </div>
+                                <span class="discount">38%</span>
+                                <div class="card__content">
+                                    <div class="card__price">
+                                        <span class="card__price-now">77.69₽</span>
+                                        <span class="card__price-old">121.69₽</span>
+                                    </div>
+                                    <span class="card__title">Вафли ЭССЕН Вертушки веснушки со вкусом вареной сгущенки (Россия)</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- / Promotions -->
+
+    <!-- Food -->
+    <section class="section food">
+        <div class="section__inner">
+            <div class="slider">
+                <div class="slider__header">
+                    <a href="#" class="slider__title">ДОСТАВКА ЕДЫ</a>
+                    <a class="slider__link" href="#">Показать ещё</a>
+                    <div class="slider__control">
+                        <button type="button" data-type="slider-btn-prev" class="slider__control-prev"></button>
+                        <button type="button" data-type="slider-btn-next" class="slider__control-next"></button>
+                    </div>
+                </div>
+                <div class="slider__substrate">
+                    <div class="slider__content" data-type="slider-content">
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/card_example.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <span class="card__title">Пиццерия Додо-пицца1</span>
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__location">
+                                            <img src="img/card_location.png" alt="location">
+                                            <span>500 м</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>до 23:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/card_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <span class="card__title">Пиццерия Додо-пицца2</span>
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__location">
+                                            <img src="img/card_location.png" alt="location">
+                                            <span>500 м</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>до 23:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/card_example.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <span class="card__title">Пиццерия Додо-пицца Пиццерия Додо-пицца Пиццерия Додо-пицца Пиццерия Додо-пицца Пиццерия Додо-пицца</span>
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__location">
+                                            <img src="img/card_location.png" alt="location">
+                                            <span>500 м</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>до 23:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/card_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <span class="card__title">Пиццерия Додо-пицца4</span>
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__location">
+                                            <img src="img/card_location.png" alt="location">
+                                            <span>500 м</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>до 23:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/card_example.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <span class="card__title">Пиццерия Додо-пицца5</span>
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__location">
+                                            <img src="img/card_location.png" alt="location">
+                                            <span>500 м</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>до 23:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/card_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <span class="card__title">Пиццерия Додо-пицца6</span>
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__location">
+                                            <img src="img/card_location.png" alt="location">
+                                            <span>500 м</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>до 23:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/card_example.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <span class="card__title">Пиццерия Додо-пицца7</span>
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__location">
+                                            <img src="img/card_location.png" alt="location">
+                                            <span>500 м</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>до 23:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/card_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <span class="card__title">Пиццерия Додо-пицца8</span>
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__location">
+                                            <img src="img/card_location.png" alt="location">
+                                            <span>500 м</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>до 23:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/card_example.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <span class="card__title">Пиццерия Додо-пицца9</span>
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__location">
+                                            <img src="img/card_location.png" alt="location">
+                                            <span>500 м</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>до 23:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="link-wrapper">
+                            <div class="card">
+                                <div class="card__img">
+                                    <img src="img/cards/card_1.png" alt="preview_img">
+                                </div>
+                                <span class="rating">5.6</span>
+                                <div class="card__content">
+                                    <span class="card__title">Пиццерия Додо-пицца10</span>
+                                    <div class="card__info card__info-secondary">
+                                        <div class="card__location">
+                                            <img src="img/card_location.png" alt="location">
+                                            <span>500 м</span>
+                                        </div>
+                                        <div class="card__time">
+                                            <img src="img/card_time.png" alt="time">
+                                            <span>до 23:00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- / Food -->
+
+    <!-- Services -->
+    <section class="section services">
+        <div class="section__inner">
+            <div class="services__inner">
+                <!-- Vertical banner -->
+                <div class="banner-vert">
+                    <div class="banner__outer">
+                        <div class="banner">
+                            <div class="banner__content">
+                                <a href="#3" class="link-wrapper">
+                                    <img class="banner__img" src="img/cards/banner_vert.png" alt="banner">
+                                </a>
+                                <a href="#2" class="link-wrapper">
+                                    <img class="banner__img" src="img/cards/banner_vert.png" alt="banner">
+                                </a>
+                                <a href="#1" class="link-wrapper">
+                                    <img class="banner__img" src="img/cards/banner_vert.png" alt="banner">
+                                </a>
+                                <a href="#0" class="link-wrapper">
+                                    <img class="banner__img" src="img/cards/banner_vert.png" alt="banner">
+                                </a>
+                            </div>
+                            <span class="advertising-tag">реклама</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- / Vertical banner -->
+
+                <div class="slider">
+                    <div class="slider__header">
+                        <a href="#" class="slider__title">Услуги</a>
+                        <a class="slider__link" href="#">Показать ещё</a>
+                        <div class="slider__control">
+                            <button type="button" data-type="slider-btn-prev" class="slider__control-prev"></button>
+                            <button type="button" data-type="slider-btn-next" class="slider__control-next"></button>
+                        </div>
+                    </div>
+                    <div class="slider__substrate">
+                        <div class="slider__content" data-type="slider-content">
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_example.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца1</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_1.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца2<br>Пиццерия Додо-пицца</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_example.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца3<br>Пиццерия Додо-пицца</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_1.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца4<br>Пиццерия Додо-пицца</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_example.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца5<br>Пиццерия Додо-пицца</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_1.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца6<br>Пиццерия Додо-пицца</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_example.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца7<br>Пиццерия Додо-пицца</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_1.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца8<br>Пиццерия Додо-пицца</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_example.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца9<br>Пиццерия Додо-пицца</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_1.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца10<br>Пиццерия Додо-пицца</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_1.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца11<br>Пиццерия Додо-пицца</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_1.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца12<br>Пиццерия Додо-пицца</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_1.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца13<br>Пиццерия Додо-пицца</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <a href="#" class="link-wrapper">
+                                <div class="card">
+                                    <div class="card__img">
+                                        <img src="img/cards/card_1.png" alt="preview_img">
+                                    </div>
+                                    <span class="rating">5.6</span>
+                                    <div class="card__content">
+                                        <span class="card__title">Пиццерия Додо-пицца14<br>Пиццерия Додо-пицца</span>
+                                        <div class="card__info card__info-secondary">
+                                            <div class="card__location">
+                                                <img src="img/card_location.png" alt="location">
+                                                <span>500 м</span>
+                                            </div>
+                                            <div class="card__time">
+                                                <img src="img/card_time.png" alt="time">
+                                                <span>до 23:00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / Services -->
+</main>
+
+<!-- Popup mobile redirect -->
+<div id="mobRedirect" class="modal popup mob-redirect">
+    <p class="mob-redirect__text">Данная функция доступна <br> в мобильном приложение <br>“Любимый город”</p>
+    <div class="mob-redirect__footer">
+        <div class="mob-redirect__logo">
+            <img class="mob-redirect__logo-img" src="img/logo_46.png" loading="lazy" alt="logo">
+            <div class="mob-redirect__logo-txt">
+                <span class="mob-redirect__logo-txt-title">Любимый город</span>
+                <span class="mob-redirect__logo-txt-desc">Международная сеть городских приложений</span>
+            </div>
+        </div>
+
+        <div class="mob-redirect__links">
+            <a href="#"><img src="img/market_ios.png" loading="lazy" alt="ios"></a>
+            <a href="#"><img src="img/market_android.png" loading="lazy" alt="android"></a>
+        </div>
+    </div>
+    <a href="#" rel="modal:close" class="popup__close">
+        <img src="img/close_popup.png" loading="lazy" alt="close">
+    </a>
+</div>
+<!-- / Popup mobile redirect -->
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__col footer__col-left">
+            <a href="#" class="footer__link">Франшиза</a>
+            <a href="#" class="footer__link">Создать сайт</a>
+            <div class="footer__links_group_img">
+                <a href="#"><img src="img/social_vk.png" loading="lazy" alt="vk"></a>
+                <a href="#"><img src="img/social_fb.png" loading="lazy" alt="fb"></a>
+                <a href="#"><img src="img/social_inst.png" loading="lazy" alt="inst"></a>
+            </div>
+        </div>
+        <div class="footer__col footer__col-center">
+            <img src="img/logo-footer.png" class="footer__logo" loading="lazy" alt="logo">
+            <span class="footer__description">Сеть городских порталов <br> и мобильных приложений</span>
+        </div>
+        <div class="footer__col footer__col-right">
+            <a href="#" class="footer__link">О компании</a>
+            <a href="#" class="footer__link">Контакты</a>
+            <div class="footer__links_group_img">
+                <a href="#"><img src="img/market_android.png" loading="lazy" alt="android"></a>
+                <a href="#"><img src="img/market_ios.png" loading="lazy" alt="ios"></a>
+            </div>
+        </div>
+    </div>
+    <span class="footer__copyright">&copy; Любимый город 2018-2019</span>
+</footer>
+<!-- / Footer -->
+
+<script src="lib/js/jquery-3.5.1.min.js"></script>
+<script src="lib/js/slick.min.js"></script>
+<script src="lib/js/jquery.modal.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

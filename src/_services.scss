@@ -1,0 +1,100 @@
+// === Services ===
+.services {
+  order: 8;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    padding-left: 2px;
+    padding-right: 2px;
+
+    @include sm(flex-direction, column);
+
+    .slider {
+      width: calc((100% / 6 - (20px * 5) / 6) * 4 + 20px * 3);
+
+      @include rg-block {
+        width: calc((100% / 5 - (20px * 4) / 5) * 3 + 20px * 2);
+      }
+
+      @include md-block {
+        width: 100%;
+      }
+    }
+
+    .banner-vert {
+      width: calc((100% / 6 - (20px * 5) / 6) * 2 + 20px);
+      margin-top: auto;
+      margin-right: 20px;
+
+      @include rg-block {
+        width: calc((100% / 5 - (20px * 4) / 5) * 2 + 20px);
+      }
+
+      @include md-block {
+        display: none;
+      }
+
+      @include to(400px) {
+        width: calc(100% - 20px);
+        margin-left: 10px;
+        margin-right: 10px;
+        display: block;
+      }
+    }
+  }
+
+  .slider {
+    &__title {
+      margin-left: 0;
+
+      @include md(margin-left, 52px);
+      @include sm(margin-left, 10px);
+    }
+
+    &__substrate {
+      padding-left: 0;
+      padding-right: 0;
+
+      @include md-block {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+
+    &__content {
+      width: auto;
+      grid-auto-columns: calc(100% / 4 - (20px * 3) / 4);
+
+
+      @include rg-block {
+        grid-auto-columns: calc(100% / 3 - (20px * 2) / 3);
+      }
+
+      @include md-block {
+        grid-auto-columns: minmax(172px, 196px);
+      }
+
+      & > * {
+        max-width: 196px;
+        min-width: 172px;
+
+        &:nth-child(odd) {
+          grid-row: 1 / 2;
+        }
+
+        &:nth-child(even) {
+          grid-row: 2 / 3;
+        }
+
+        @include md-block {
+          grid-row: 1 / 2 !important;
+        }
+      }
+    }
+  }
+}
+
+// === / Services ===

@@ -1,0 +1,45 @@
+// === Business tape ===
+.business{
+  order: 1;
+
+  .slider__content{
+    grid-auto-columns: calc(100% / 4 - (20px * 3) / 4);
+
+    @include rg-block{
+      grid-auto-columns: calc(100% / 3 - (20px * 2) / 3);
+    }
+
+    @include md-block{
+      grid-auto-columns: minmax(236px, 304px);
+    }
+
+    & > *{
+      //max-width: 304px;
+      min-width: 236px;
+    }
+  }
+
+  .card {
+    border-top: 4px solid #B8D02F;
+
+    &__content{
+      padding-bottom: 10px;
+
+      @include md-block{
+        padding-top: 7px;
+        padding-bottom: 6px;
+      }
+    }
+
+    &__info{
+      @include md-block{
+        margin-top: 5px;
+      }
+    }
+
+    &__img{
+      padding-top: 54.75%;
+    }
+  }
+}
+// === / Business tape ===

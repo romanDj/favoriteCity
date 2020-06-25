@@ -1,0 +1,84 @@
+@import 'fonts.scss';
+@import 'normalize.scss';
+@import 'utils.scss';
+@import 'marginpadding.scss';
+
+
+//components
+@import '_header.scss';
+@import '_main-content.scss';
+@import '_catalog.scss';
+@import '_section.scss';
+@import '_slider.scss';
+@import '_banner.scss';
+@import '_banner-hor.scss';
+@import '_banner-vert.scss';
+@import '_business.scss';
+@import '_rating.scss';
+@import '_movie.scss';
+@import '_ads.scss';
+@import '_poster.scss';
+@import '_promotions.scss';
+@import '_discount.scss';
+@import '_food.scss';
+@import '_services.scss';
+@import '_card.scss';
+@import '_advertising.scss';
+@import '_footer.scss';
+@import '_popup.scss';
+@import '_mob-redirect__popup.scss';
+
+
+body{
+  background: #E5E5E5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  @include font-roboto;
+}
+
+// === Scroll ===
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #EDEEF0;
+  border-radius: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #B3BBBF;
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+// === / Scroll ===
+
+.link-wrapper {
+  text-decoration: none;
+  color: #000000;
+  display: block;
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 1280px;
+  padding-right: 2px;
+  padding-left: 2px;
+  margin: 0 auto;
+
+  @include rg(max-width, 960px);
+  @include md-block{
+    max-width: 768px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

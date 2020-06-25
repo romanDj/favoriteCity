@@ -1,0 +1,67 @@
+// ===  Popup mobile redirect ===
+.mob-redirect{
+  &__text{
+    @include font-roboto(300);
+    font-size: 1.5rem;
+    line-height: 1.93rem;
+    text-align: center;
+    color: #4F4F4F;
+    margin-top: 0;
+    margin-bottom: 31px;
+  }
+
+  &__footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    &-img{
+      margin-right: 9px;
+    }
+
+    &-txt{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+
+      &-title{
+        @include font-tahoma;
+        font-size: 1.12rem;
+        color: #737A7E;
+      }
+      &-desc{
+        margin-top: 2px;
+        @include font-roboto(300);
+        font-size: 0.62rem;
+        color: #4F4F4F;
+      }
+    }
+  }
+
+  &__links{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    @include to(490px){
+      margin-top: 20px;
+      flex-basis: 100%;
+      justify-content: center;
+    }
+
+    a:not(:last-child){
+      margin-right: 17px;
+    }
+  }
+}
+
+// === / Popup mobile redirect===

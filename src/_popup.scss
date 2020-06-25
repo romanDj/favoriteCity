@@ -1,0 +1,30 @@
+// ===  Popup ===
+.jquery-modal{
+  z-index: 50 !important;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.popup{
+  box-shadow: none;
+  border-radius: 0;
+  max-width: 452px;
+  background: #FFFFFF;
+  padding: 26px 20px;
+
+  &__close{
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    transform: translate(50%, -50%);
+
+    img{
+      width: 21.8px;
+      height: 21.8px;
+    }
+  }
+
+  .close-modal{
+    display: none !important;
+  }
+}
+// === / Popup ===

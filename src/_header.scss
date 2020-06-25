@@ -1,0 +1,267 @@
+// === header ===
+.header {
+  &__upper {
+    background: #FDFDFD;
+    box-shadow: 0 2px 4px rgba(171, 171, 171, 0.25);
+    padding: 10px 24px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__lower {
+    background: #FFFFFF;
+    box-shadow: 0 1px 4px rgba(171, 171, 171, 0.25);
+    padding-left: 24px;
+    padding-right: 24px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &-fixed{
+      box-sizing: border-box;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  &__location {
+    margin-right: auto;
+    margin-left: auto;
+    @include font-roboto;
+    font-size: 0.75rem;
+
+    &-label {
+      color: #727272;
+      margin-right: 20px;
+    }
+
+    &-city {
+      text-decoration: underline;
+      color: #000000;
+    }
+  }
+
+  &__link {
+    margin-left: 30px;
+    margin-right: 30px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:nth-last-child(3) {
+      margin-right: 0;
+    }
+
+    a {
+      @include font-roboto;
+      font-size: 0.75rem;
+      color: #000000;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+
+  &__lang {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+
+    a {
+      @include font-roboto(300);
+      color: #000000;
+      font-size: 0.75rem;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+
+      &:focus ~ .header__dropdown {
+        display: block;
+      }
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 2px 2px 2px rgba(171, 171, 171, 0.15);
+    bottom: 0;
+    right: 0;
+    transform: translate(0, 100%);
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+    &-item {
+      position: relative;
+
+      a {
+        @include font-roboto;
+        font-size: 0.87rem;
+        display: block;
+        text-align: right;
+        padding: 3px 25px;
+        color: #000000;
+        text-decoration: none;
+
+        &:hover {
+          background: #B8D02F;
+          color: #FFFFFF;
+        }
+      }
+
+      &-selected a {
+        background: #B8D02F;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  &__add {
+    position: relative;
+
+    .btn {
+      @include font-roboto;
+      font-size: 0.87rem;
+      color: #333333;
+      background: #B8D02F;
+      border-radius: 18px;
+      border: none;
+      padding: 6px 14px;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus ~ .header__dropdown {
+        display: block;
+      }
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+
+    &-text {
+      @include font-tahoma;
+      font-size: 1rem;
+      color: #4F4F4F;
+      margin-left: 11px;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    align-self: stretch;
+    //margin-left: auto;
+    margin-right: auto;
+
+    &-item {
+      position: relative;
+      margin-left: 36px;
+      margin-right: 36px;
+      cursor: pointer;
+
+      img {
+        margin-right: 5px;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        height: 100%;
+        color: #000000;
+        text-decoration: none;
+
+        &:focus .header__menu-dropdown {
+          transform: rotate(180deg);
+        }
+
+        &:focus ~ .catalog {
+          display: block;
+        }
+      }
+
+      span {
+        display: block;
+        @include font-roboto(300);
+        font-size: 0.87rem;
+        text-transform: uppercase;
+      }
+    }
+
+    &-hover {
+      position: absolute;
+      width: 100px;
+      height: 3px;
+      bottom: 0;
+      background: #B8D02F;
+      display: none;
+
+      &-visible {
+        display: block;
+      }
+    }
+  }
+
+  &__search {
+    border: 1px solid #737A7E;
+    box-sizing: border-box;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    min-width: 161px;
+    align-items: center;
+
+    &-img {
+      margin: 5px 10px;
+      padding: 0;
+      cursor: pointer;
+      border: none;
+      background: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &-input {
+      width: 100%;
+      height: inherit !important;
+      padding-left: 15px;
+      padding-right: 15px;
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        @include font-roboto(300);
+        font-size: 0.75rem;
+        text-align: right;
+        color: #737A7E;
+      }
+    }
+  }
+}
+
+// === / header ===

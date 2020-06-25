@@ -1,0 +1,192 @@
+// === Card ===
+.card {
+  background: #FFFFFF;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: top 100ms ease-in-out;
+
+  &:hover{
+    top: -4px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__title {
+    @include font-roboto(300);
+    color: #000000;
+    font-size: 0.87rem;
+    line-height: 1.125rem;
+    margin-bottom: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; // количество строк
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include md-block{
+      font-size: 0.75rem;
+      line-height: 0.875rem;
+    }
+  }
+
+  &__company {
+    @include font-roboto(300);
+    font-size: 0.75rem;
+    margin-bottom: 8px;
+
+    @include md(font-size, 0.625rem);
+  }
+
+  &__content {
+    box-sizing: border-box;
+    border: 1px solid #B3BBBF;
+    border-top: 0;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 8px;
+
+    &-secondary {
+      color: #737A7E;
+    }
+  }
+
+  &__location, &__time {
+    display: flex;
+    align-items: center;
+    @include font-roboto(300);
+    font-size: 0.625rem;
+
+    img {
+      display: block;
+      margin-right: 8px;
+    }
+  }
+
+  &__category {
+    @include font-roboto(300);
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2; // количество строк
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include md-block{
+      font-size: 0.625rem;
+      line-height: 116%;
+    }
+  }
+
+  &__restriction {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 0 2px;
+    margin-left: 10px;
+
+    span {
+      @include font-ropa();
+      font-size: 0.875rem;
+      line-height: 0.93rem;
+      color: #000000;
+    }
+  }
+
+  &__location {
+    margin-right: 15px;
+  }
+
+  &__address, &__source {
+    @include font-roboto(200);
+    font-size: 0.75rem;
+    margin-top: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; // количество строк
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include md(font-size, 0.625rem);
+  }
+
+  &__source{
+    margin-top: 1px;
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 6px;
+
+    span {
+      @include font-roboto(300);
+      font-size: 0.875rem;
+      line-height: 1.125rem;
+    }
+
+    &-now {
+      color: #F93822;
+      margin-right: 20px;
+    }
+
+    &-old {
+      color: #737A7E;
+      text-decoration: line-through;
+    }
+  }
+
+  &__price-ad {
+    background: #B8D02F;
+    padding: 7px 2px;
+
+    span {
+      @include font-roboto(300);
+      display: block;
+      text-align: center;
+      font-size: 0.75rem;
+      line-height: 0.875rem;
+
+      @include md-block{
+        font-size: 0.625rem;
+        line-height: 116%;
+      }
+    }
+  }
+}
+
+// === / Card ===

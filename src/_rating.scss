@@ -1,0 +1,37 @@
+// === Rating ===
+.rating {
+  @include font-roboto(700);
+  position: relative;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 7px;
+  padding-left: 5px;
+  color: #FDFDFD;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  background: #B8D02F;
+  border-radius: 7px 0 0 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-89%);
+    border: calc(1rem + 8px) solid transparent;
+    border-bottom: 0 solid transparent;
+    border-left: 0 solid transparent;
+    border-right: 10px solid #B8D02F;
+  }
+
+  &-purple {
+    background: #8F3E97;
+
+    &:before {
+      border-right-color: #8F3E97;
+    }
+  }
+}
+
+// === / Rating ===

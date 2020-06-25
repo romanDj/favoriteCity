@@ -1,0 +1,55 @@
+// === Poster ===
+.poster {
+  order: 5;
+  @include from-to(768px, 960px) {
+    margin-bottom: 10px;
+  }
+
+  .slider__content {
+    grid-auto-columns: calc(100% / 6 - (20px * 5) / 6);
+
+    @include rg-block {
+      grid-auto-columns: calc(100% / 5 - (20px * 4) / 5);
+    }
+
+    @include md-block {
+      grid-auto-columns: minmax(172px, 196px);
+    }
+
+    & > * {
+      max-width: 196px;
+      min-width: 172px;
+    }
+  }
+
+  .rating {
+    top: 30px;
+  }
+
+  .card__content {
+    border: none;
+  }
+
+  .card__info {
+    margin-top: 0;
+    margin-bottom: 6px;
+    align-items: start;
+    width: 100%;
+    flex-wrap: wrap;
+
+    & > :first-child {
+      margin-right: auto;
+    }
+  }
+
+  .card__time {
+    width: 100%;
+    flex-shrink: 0;
+
+    span {
+      color: #000000;
+    }
+  }
+}
+
+// === / Poster ===

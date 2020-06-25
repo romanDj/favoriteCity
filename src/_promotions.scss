@@ -1,0 +1,40 @@
+// === Promotions ===
+.promotions {
+  order: 6;
+
+  .slider__content{
+    grid-auto-columns: calc(100% / 4 - (20px * 3) / 4);
+
+    @include rg-block {
+      grid-auto-columns: calc(100% / 3 - (20px * 2) / 3);
+    }
+
+    @include md-block {
+      grid-auto-columns: minmax(236px, 304px);
+    }
+
+    & > *{
+      //max-width: 304px;
+      min-width: 236px;
+    }
+  }
+
+  .card {
+    border-top: 4px solid #F89C1C;
+
+    &__img{
+      padding-top: 55.9%;
+    }
+
+    &__content{
+      padding-top: 10px;
+      padding-bottom: 7px;
+
+      @include md-block {
+        padding-top: 8px;
+        padding-bottom: 15px;
+      }
+    }
+  }
+}
+// === / Promotions ===

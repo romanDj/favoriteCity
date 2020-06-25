@@ -1,0 +1,12 @@
+// === Vertical banner ===
+.banner-vert {
+  display: block;
+
+  @include sm(margin-bottom, 30px);
+
+  .banner__outer {
+    width: 100%;
+    padding-top: 134%;
+  }
+}
+// === / Vertical banner ===

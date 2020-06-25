@@ -1,0 +1,25 @@
+// === Section ===
+.section {
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  @include md-block{
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  @include sm-block{
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+
+  &__inner {
+    max-width: 1276px;
+    margin: 0 auto;
+
+    @include rg(max-width, 960px);
+    @include md(max-width, 768px);
+  }
+}
+
+// === / Section ===
