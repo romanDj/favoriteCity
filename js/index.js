@@ -193,12 +193,25 @@ $(document).ready(function () {
 
     $('.header__logo').click(function (e) {
         e.preventDefault();
-        if((window.location.pathname == ""
-            || window.location.pathname == "/") && !window.location.search){
-            $("html, body").stop().animate({scrollTop: 0}, 500, 'swing', function () {});
-        }else{
+        if ((window.location.pathname == ""
+            || window.location.pathname == "/") && !window.location.search) {
+            $("html, body").stop().animate({scrollTop: 0}, 500, 'swing', function () {
+            });
+        } else {
             window.location = "/";
         }
+    });
+
+    $('.header-mob__search').click(function () {
+        $('.header-mob .header__search').toggleClass('header__search-visible');
+    });
+
+    $('.header-mob__burger').click(function () {
+        $('.header-mob__side').toggleClass('header-mob__side-visible');
+    });
+
+    $('.header-mob__top').click(function () {
+        $("html, body").stop().animate({scrollTop: 0}, 500, 'swing');
     });
 
     $('.advert__slider').slick({
