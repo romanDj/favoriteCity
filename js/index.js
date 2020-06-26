@@ -54,8 +54,13 @@
                         index = 0;
                     }
                     var position = index * card_width + index * card_margin;
+                    var difference = (index - 1 + card_in_page_count * count_row + count_row) - card_count;
+
+                    if(difference > 0){
+                        position -= (difference * card_width  + difference * card_margin);
+                    }
                     el.css({
-                        'left': '-' + position + 'px'
+                        'transform': 'translateX(-' + position + 'px)'
                     });
                 } catch (e) {
                     console.log(e);
@@ -131,6 +136,38 @@
 })(jQuery);
 /** end Banner for advertising **/
 
+
+/** Mobile catalog **/
+(function ($) {
+    jQuery.fn.mobileCatalog = function (options) {
+        var init = async function () {
+            var open = false;
+
+            function _init() {
+            }
+
+            function _close() {
+                $(this).removeClass("catalog-mob-visible");
+                $('html, body').css({"overflow": "auto"});
+            }
+
+            var init = _init.bind(this);
+            var close = _close.bind(this);
+
+            init();
+
+            $(this).find('*[data-type="back"]').click(function () {
+                close();
+            });
+            $(this).find('*[data-type="close"]').click(function () {
+                close();
+            });
+        };
+        return this.each(init);
+    };
+})(jQuery);
+/** end Mobile catalog **/
+
 $(document).ready(function () {
     /** Hover line in menu **/
     var hoverLine = $(".header__menu-hover");
@@ -202,6 +239,7 @@ $(document).ready(function () {
         }
     });
 
+    /** Mobile events **/
     $('.header-mob__search').click(function () {
         $('.header-mob .header__search').toggleClass('header__search-visible');
     });
@@ -214,9 +252,15 @@ $(document).ready(function () {
         $("html, body").stop().animate({scrollTop: 0}, 500, 'swing');
     });
 
-    $('.advert__slider').slick({
-        dots: true,
+    $('.header-mob__link-catalog').click(function(e){
+        e.preventDefault();
+        $('html, body').css({"overflow": "hidden"});
+        $('.catalog-mob').addClass('catalog-mob-visible');
     });
+    /** end Mobile events **/
+
+    $('.advert__slider').slick({dots: true});
     $('.slider').sliderCards();
     $('.banner').bannerAdvertising();
+    $('.catalog-mob').mobileCatalog();
 });

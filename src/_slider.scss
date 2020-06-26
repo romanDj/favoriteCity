@@ -150,13 +150,15 @@
     display: grid;
     grid-gap: 20px;
     position: relative;
+    transition: transform .6s ease-in-out;
+    transform: translateX(0);
 
     & > * {
       grid-row: 1 / 2;
       position: relative;
     }
 
-    @include sm(left, 0);
+    @include sm(transform, translateX(0));
   }
 }
 
