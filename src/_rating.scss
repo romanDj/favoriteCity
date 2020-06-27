@@ -8,28 +8,22 @@
   padding-left: 5px;
   color: #FDFDFD;
   position: absolute;
-  top: 15px;
+  top: 20px;
   right: 0;
-  background: #B8D02F;
-  border-radius: 7px 0 0 0;
+  z-index: 0;
 
   &:before {
-    content: '';
+    content: url(../img/rating_green.png);
     position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translateX(-89%);
-    border: calc(1rem + 8px) solid transparent;
-    border-bottom: 0 solid transparent;
-    border-left: 0 solid transparent;
-    border-right: 10px solid #B8D02F;
+    bottom: 50%;
+    right: 0;
+    transform: translateY(50%);
+    z-index: -1;
   }
 
   &-purple {
-    background: #8F3E97;
-
     &:before {
-      border-right-color: #8F3E97;
+      content: url(../img/rating_purple.png);
     }
   }
 
@@ -39,10 +33,7 @@
     padding-right: 3px;
 
     &:before{
-      border: .9rem solid transparent;
-      border-bottom: 0 solid transparent;
-      border-left: 0 solid transparent;
-      border-right: 5px solid #B8D02F;
+      content: url(../img/rating_sm.png);
     }
   }
 }
