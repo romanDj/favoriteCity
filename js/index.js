@@ -56,8 +56,8 @@
                     var position = index * card_width + index * card_margin;
                     var difference = (index - 1 + card_in_page_count * count_row + count_row) - card_count;
 
-                    if(difference > 0){
-                        position -= (difference * card_width  + difference * card_margin);
+                    if (difference > 0) {
+                        position -= (difference * card_width + difference * card_margin);
                     }
                     el.css({
                         'transform': 'translateX(-' + position + 'px)'
@@ -141,26 +141,60 @@
 (function ($) {
     jQuery.fn.mobileCatalog = function (options) {
         var init = async function () {
-            var open = false;
-
-            function _init() {
-            }
+            var prev = null;
+            var title = $('.catalog-mob__title').html();
 
             function _close() {
                 $(this).removeClass("catalog-mob-visible");
                 $('html, body').css({"overflow": "auto"});
             }
 
-            var init = _init.bind(this);
-            var close = _close.bind(this);
+            function _closeDownload() {
+                $(this).find('*[data-type="app-download"]')
+                    .css({"visibility": "hidden"});
+            }
 
-            init();
+            function _openSub(e) {
+                if ($(e).find('~.catalog-mob__list-sub').length > 0) {
+                    prev = $(e).find('~.catalog-mob__list-sub');
+                    $(this).find('.catalog-mob__title').html($(e).find('span').html());
+                    $(e).find('~.catalog-mob__list-sub')
+                        .addClass('catalog-mob__list-sub-visible');
+                    $(this).find('.catalog-mob__content').css({'overflow': 'hidden'});
+                }
+            }
+
+            function _closeSub() {
+                $(this).find('.catalog-mob__title').html(title);
+                $(this).find('.catalog-mob__list-sub')
+                    .removeClass('catalog-mob__list-sub-visible');
+                $(this).find('.catalog-mob__content').css({'overflow': 'auto'});
+                prev = null;
+            }
+
+            var close = _close.bind(this);
+            var closeDownload = _closeDownload.bind(this);
+            var closeSub = _closeSub.bind(this);
+            var openSub = _openSub.bind(this);
 
             $(this).find('*[data-type="back"]').click(function () {
+                if (prev != null) {
+                    closeSub();
+                } else {
+                    close();
+                }
+            });
+
+            $(this).find('*[data-type="close"]').click(function () {
+                closeSub();
                 close();
             });
-            $(this).find('*[data-type="close"]').click(function () {
-                close();
+            $(this).find('*[data-type="app-download-close"]').click(function () {
+                closeDownload();
+            });
+
+            $(this).find('.catalog-mob__list-item a').click(function () {
+                openSub(this);
             });
         };
         return this.each(init);
@@ -252,7 +286,7 @@ $(document).ready(function () {
         $("html, body").stop().animate({scrollTop: 0}, 500, 'swing');
     });
 
-    $('.header-mob__link-catalog').click(function(e){
+    $('.header-mob__link-catalog').click(function (e) {
         e.preventDefault();
         $('html, body').css({"overflow": "hidden"});
         $('.catalog-mob').addClass('catalog-mob-visible');

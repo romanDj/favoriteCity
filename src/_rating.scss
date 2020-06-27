@@ -32,6 +32,19 @@
       border-right-color: #8F3E97;
     }
   }
+
+  &-sm{
+    font-size: 0.875rem;
+    line-height: 0.625rem;
+    padding-right: 3px;
+
+    &:before{
+      border: .9rem solid transparent;
+      border-bottom: 0 solid transparent;
+      border-left: 0 solid transparent;
+      border-right: 5px solid #B8D02F;
+    }
+  }
 }
 
 // === / Rating ===
