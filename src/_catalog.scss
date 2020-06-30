@@ -388,13 +388,18 @@
 
       a {
         @include font-roboto(300);
-        display: block;
+        display: flex;
+        align-items: center;
         text-decoration: none;
         font-size: 0.87rem;
         color: #000000;
         white-space: nowrap;
         padding: 10px 14px;
         text-align: left;
+
+        img{
+          margin-left: auto;
+        }
       }
 
       &:hover .catalog__category-secondary,
